@@ -1,0 +1,41 @@
+﻿@model MvcApplication3.Models.musicdata
+@{
+    ViewBag.Title = "Music Store";
+}
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+
+        </div>
+    </section>
+}
+<h3>Available albums</h3>
+
+@*@Html.DropDownListFor(x => x.SomePropertyOnModel, (IEnumerable<SelectListItem>)ViewBag.Clients)*@
+@*@Html.DropDownListFor(m => m.Text, ViewBag.ItemList as IEnumerable<SelectListItem>)*@
+<p>@ViewBag.Server</p>
+@Html.DropDownListFor(x => x.recordid, new SelectList(ViewBag.Clients, "Text", "Value"), string.Empty)
+
+
+
+<ol class="round">
+    <li class="one">
+        <h5>Dream On</h5>
+        <a> Artist </a>
+    </li>
+
+    <li class="two">
+        <h5>StarBoy</h5>
+          <a> Artist </a>
+    </li>
+
+    <li class="three">
+        <h5>Deja Vu</h5>
+          <a> Artist </a>
+    </li>
+</ol>
